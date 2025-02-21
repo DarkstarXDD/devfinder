@@ -24,6 +24,27 @@ export default function App() {
             Search
           </button>
         </form>
+
+        <div className="mt-4 grid gap-6 rounded bg-white px-4 py-4 dark:bg-blue-900">
+          <div className="flex items-center gap-5">
+            <img
+              src="/placeholder.png"
+              alt=""
+              width={117}
+              height={117}
+              className="size-16 md:size-30"
+            />
+            <div className="grid gap-1">
+              <h1 className="text-base font-bold">The Octocat</h1>
+              <p className="text-blue-400">@octocat</p>
+              <p>Joined 25 Jan 2011</p>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+            odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
       </main>
     </>
   )
