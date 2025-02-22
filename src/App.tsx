@@ -1,4 +1,10 @@
+import DetailsListItem from "./components/DetailsListItem"
+
 import { IoSearchOutline } from "react-icons/io5"
+import { FaLocationDot } from "react-icons/fa6"
+import { FaLink } from "react-icons/fa"
+import { FaTwitter } from "react-icons/fa"
+import { HiBuildingOffice2 } from "react-icons/hi2"
 
 export default function App() {
   return (
@@ -44,6 +50,26 @@ export default function App() {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
             odio. Quisque volutpat mattis eros.
           </p>
+          <div className="bg-blue-50 px-4 py-4.5 dark:bg-blue-950">
+            <dl>
+              <dt>Repos</dt>
+              <dd>8</dd>
+            </dl>
+            <dl>
+              <dt>Followers</dt>
+              <dd>3938</dd>
+            </dl>
+            <dl>
+              <dt>Following</dt>
+              <dd>9</dd>
+            </dl>
+          </div>
+          <ul className="grid gap-4 md:grid-cols-2">
+            <DetailsListItem icon={FaLocationDot} content="San Francisco" />
+            <DetailsListItem icon={FaLink} content="https://github.blog" />
+            <DetailsListItem icon={FaTwitter} content="" />
+            <DetailsListItem icon={HiBuildingOffice2} content="@github" />
+          </ul>
         </div>
       </main>
     </>
