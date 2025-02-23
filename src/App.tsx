@@ -9,6 +9,12 @@ import { FaTwitter } from "react-icons/fa"
 import { HiBuildingOffice2 } from "react-icons/hi2"
 
 export default function App() {
+  // Temporary
+  const location = "San Francisco"
+  const blog = "https://github.blog"
+  const twitter = "octocat"
+  const company = "@github"
+
   return (
     <>
       <Header />
@@ -42,10 +48,18 @@ export default function App() {
           </dl>
 
           <ul className="grid gap-4 md:grid-cols-2">
-            <DetailsListItem icon={FaLocationDot} content="San Francisco" />
-            <DetailsListItem icon={FaLink} content="https://github.blog" />
-            <DetailsListItem icon={FaTwitter} content="" />
-            <DetailsListItem icon={HiBuildingOffice2} content="@github" />
+            <DetailsListItem icon={FaLocationDot} content={location} />
+            <DetailsListItem icon={FaLink} content={blog} href={blog} />
+            <DetailsListItem
+              icon={FaTwitter}
+              content={twitter ? `@${twitter}` : undefined}
+              href={twitter ? `https://x.com/${twitter}` : undefined}
+            />
+            <DetailsListItem
+              icon={HiBuildingOffice2}
+              content={company}
+              href={`https://github.com/${company.split("@")[1]}`}
+            />
           </ul>
         </div>
       </main>
