@@ -13,12 +13,15 @@
 }
 
 @theme {
+  --breakpoint-md: 36rem;
+
   --font-space-mono: "Space Mono", monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-lg: 1.75rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
 
   --font-weight-*: initial;
   --font-weight-regular: 400;
@@ -30,7 +33,7 @@
 
   --color-blue-50: hsl(227, 100%, 98%);
   --color-blue-300: hsl(217, 20%, 51%);
-  --color-blue-400: hsl(212, 100%, 50%);
+  --color-blue-400: hsl(212, 100%, 45%);
   --color-blue-500: hsl(217, 35%, 45%);
   --color-blue-800: hsl(217, 21%, 21%);
   --color-blue-900: hsl(222, 41%, 20%);
