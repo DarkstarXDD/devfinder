@@ -25,7 +25,7 @@ export default function App() {
             />
             <div className="grid gap-1">
               <h1 className="text-base font-bold md:text-xl">The Octocat</h1>
-              <p className="text-blue-400">@octocat</p>
+              <p className="text-blue-400 dark:text-blue-200">@octocat</p>
               <p>Joined 25 Jan 2011</p>
             </div>
           </div>
