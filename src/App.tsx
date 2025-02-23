@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import Form from "./components/Form"
+import DescriptionListItem from "./components/DescriptionListItem"
 import DetailsListItem from "./components/DetailsListItem"
 
 import { FaLocationDot } from "react-icons/fa6"
@@ -33,20 +34,13 @@ export default function App() {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
             odio. Quisque volutpat mattis eros.
           </p>
-          <div className="flex w-full max-w-96 items-center justify-between justify-self-center rounded-md bg-blue-50 px-4 py-4.5 md:max-w-none md:px-8 dark:bg-blue-950">
-            <dl className="grid justify-items-center gap-1">
-              <dt>Repos</dt>
-              <dd className="text-base font-bold md:text-lg">8</dd>
-            </dl>
-            <dl className="grid justify-items-center gap-1">
-              <dt>Followers</dt>
-              <dd className="text-base font-bold md:text-lg">3938</dd>
-            </dl>
-            <dl className="grid justify-items-center gap-1">
-              <dt>Following</dt>
-              <dd className="text-base font-bold md:text-lg">9</dd>
-            </dl>
-          </div>
+
+          <dl className="flex w-full max-w-96 items-center justify-between justify-self-center rounded-md bg-blue-50 px-4 py-4.5 md:max-w-none md:px-8 dark:bg-blue-950">
+            <DescriptionListItem name="Repos" value="8" />
+            <DescriptionListItem name="Followers" value="3938" />
+            <DescriptionListItem name="Following" value="9" />
+          </dl>
+
           <ul className="grid gap-4 md:grid-cols-2">
             <DetailsListItem icon={FaLocationDot} content="San Francisco" />
             <DetailsListItem icon={FaLink} content="https://github.blog" />
