@@ -21,33 +21,34 @@ export default function App() {
       <main>
         <Form />
 
-        <div className="mt-4 grid gap-6 rounded-md bg-white p-4 shadow-md md:gap-10 md:p-10 dark:bg-blue-900">
-          <div className="flex items-center gap-5 md:gap-10">
-            <img
-              src="/placeholder.png"
-              alt=""
-              width={117}
-              height={117}
-              className="size-16 md:size-30"
-            />
-            <div className="grid gap-1">
-              <h1 className="text-base font-bold md:text-xl">The Octocat</h1>
-              <p className="text-blue-400 dark:text-blue-200">@octocat</p>
-              <p>Joined 25 Jan 2011</p>
-            </div>
+        <div className="mt-4 grid grid-cols-[auto_1fr] gap-6 rounded-md bg-white p-4 shadow-md md:gap-10 md:p-10 dark:bg-blue-900">
+          <img
+            src="/placeholder.png"
+            alt=""
+            width={117}
+            height={117}
+            className="size-16 md:size-30 lg:row-span-2"
+          />
+          <div className="grid gap-1 lg:grid-cols-2">
+            <h1 className="text-base font-bold md:text-xl">The Octocat</h1>
+            <p className="text-blue-400 dark:text-blue-200">@octocat</p>
+            <p className="lg:col-start-2 lg:row-start-1 lg:justify-self-end">
+              Joined 25 Jan 2011
+            </p>
           </div>
-          <p>
+
+          <p className="col-span-2 lg:col-start-2">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
             odio. Quisque volutpat mattis eros.
           </p>
 
-          <dl className="flex w-full max-w-96 items-center justify-between justify-self-center rounded-md bg-blue-50 px-4 py-4.5 md:max-w-none md:px-8 dark:bg-blue-950">
+          <dl className="col-span-2 flex w-full max-w-96 items-center justify-between justify-self-center rounded-md bg-blue-50 px-4 py-4.5 md:max-w-none md:px-8 lg:col-start-2 dark:bg-blue-950">
             <DescriptionListItem name="Repos" value="8" />
             <DescriptionListItem name="Followers" value="3938" />
             <DescriptionListItem name="Following" value="9" />
           </dl>
 
-          <ul className="grid gap-4 md:grid-cols-2">
+          <ul className="col-span-2 grid gap-4 md:grid-cols-2 lg:col-start-2">
             <DetailsListItem icon={FaLocationDot} content={location} />
             <DetailsListItem icon={FaLink} content={blog} href={blog} />
             <DetailsListItem

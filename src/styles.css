@@ -14,6 +14,7 @@
 
 @theme {
   --breakpoint-md: 36rem;
+  --breakpoint-lg: 64rem;
 
   --font-space-mono: "Space Mono", monospace;
 
