@@ -29,8 +29,8 @@ export default function App() {
             height={117}
             className="size-16 md:size-30 lg:row-span-2"
           />
-          <div className="grid gap-1 lg:grid-cols-2">
-            <h1 className="text-base font-bold md:text-xl">The Octocat</h1>
+          <div className="grid gap-1 self-start lg:grid-cols-2">
+            <h1 className="text-lg font-bold md:text-xl">The Octocat</h1>
             <p className="text-blue-400 dark:text-blue-200">@octocat</p>
             <p className="lg:col-start-2 lg:row-start-1 lg:justify-self-end">
               Joined 25 Jan 2011

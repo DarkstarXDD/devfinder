@@ -40,4 +40,7 @@
   --color-blue-800: hsl(217, 21%, 21%);
   --color-blue-900: hsl(222, 41%, 20%);
   --color-blue-950: hsl(220, 40%, 13%);
+
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
 }
