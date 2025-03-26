@@ -1,9 +1,8 @@
 import { UserSchemaType } from "../lib/schemas/github-user"
 import { cn } from "../lib/utils"
 
-type UserStatsProps = Pick<
-  UserSchemaType,
-  "public_repos" | "followers" | "following"
+type UserStatsProps = Partial<
+  Pick<UserSchemaType, "public_repos" | "followers" | "following">
 > & { className: string }
 
 export default function UserStats({
@@ -31,12 +30,12 @@ function UserStatsItem({
   value,
 }: {
   name: string
-  value: string | number
+  value: string | number | undefined
 }) {
   return (
     <div className="grid justify-items-center gap-1">
       <dt>{name}</dt>
-      <dd className="text-base font-bold md:text-lg">{value}</dd>
+      <dd className="text-base font-bold md:text-lg">{value ?? "-"}</dd>
     </div>
   )
 }

@@ -6,9 +6,8 @@ import { HiBuildingOffice2 } from "react-icons/hi2"
 import { UserSchemaType } from "../lib/schemas/github-user"
 import { cn } from "../lib/utils"
 
-type UserDetailsProps = Pick<
-  UserSchemaType,
-  "location" | "blog" | "twitter_username" | "company"
+type UserDetailsProps = Partial<
+  Pick<UserSchemaType, "location" | "blog" | "twitter_username" | "company">
 > & { className?: string }
 
 export default function UserDetails({
@@ -53,7 +52,7 @@ function UserDetailsItem({
   return (
     <li className={`flex items-center gap-4 ${content ? "" : "opacity-75"}`}>
       <Icon className="size-5 shrink-0" />
-      <Tag href={href ?? undefined} className={Tag === "a" ? aStyles : pStyles}>
+      <Tag href={href || undefined} className={Tag === "a" ? aStyles : pStyles}>
         {content ? content : "Not Available"}
       </Tag>
     </li>
