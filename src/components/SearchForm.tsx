@@ -1,8 +1,14 @@
 import { FaSearch } from "react-icons/fa"
 
-export default function Form() {
+export default function SearchForm({ onSearch }: { onSearch: () => void }) {
   return (
-    <form className="mt-9 flex items-center gap-2 rounded-md bg-white px-4 py-3 shadow-md md:gap-4 md:px-10 md:py-4 dark:bg-blue-900">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault()
+        onSearch()
+      }}
+      className="mt-9 flex items-center gap-2 rounded-md bg-white px-4 py-3 shadow-md md:gap-4 md:px-10 md:py-4 dark:bg-blue-900"
+    >
       <label htmlFor="username" className="sr-only">
         Enter Github Username
       </label>
