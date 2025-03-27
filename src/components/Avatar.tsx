@@ -1,5 +1,6 @@
 import { cn } from "../lib/utils"
 import { IoPerson } from "react-icons/io5"
+import Image from "next/image"
 
 export default function Avatar({
   src,
@@ -12,7 +13,7 @@ export default function Avatar({
     return <PlaceholderImage className={className} />
   }
   return (
-    <img
+    <Image
       src={src}
       alt=""
       width={117}

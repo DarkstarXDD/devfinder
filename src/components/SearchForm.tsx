@@ -1,16 +1,26 @@
+"use client"
+
+import { useSearchParams, usePathname, useRouter } from "next/navigation"
 import { FaSearch } from "react-icons/fa"
 
-export default function SearchForm({
-  onSearch,
-}: {
-  onSearch: (username: string) => void
-}) {
+export default function SearchForm() {
+  const router = useRouter()
+  const pathName = usePathname()
+  const searchParams = useSearchParams()
+
+  function handleSubmit(username: string) {
+    const newSearchParams = new URLSearchParams(searchParams)
+    newSearchParams.set("username", username)
+    const newUrl = `${pathName}?${newSearchParams.toString()}`
+    router.push(newUrl)
+  }
+
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault()
         const formData = Object.fromEntries(new FormData(e.currentTarget))
-        onSearch(formData.username.toString())
+        handleSubmit(formData.username.toString())
       }}
       className="mt-9 flex items-center gap-2 rounded-md bg-white px-4 py-3 shadow-md md:gap-4 md:px-10 md:py-4 dark:bg-blue-900"
     >
@@ -22,6 +32,7 @@ export default function SearchForm({
         type="search"
         name="username"
         id="username"
+        defaultValue={searchParams.get("username") ?? undefined}
         placeholder="Github Username"
         required
         className="min-w-0 grow rounded p-3 text-base placeholder:text-blue-800/70 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none md:p-4 dark:placeholder:text-white/70"

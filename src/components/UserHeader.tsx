@@ -17,9 +17,7 @@ export default function UserHeader({
       <p className="text-blue-400 dark:text-blue-200">
         {login ? `@${login}` : "-"}
       </p>
-      <p className="lg:col-start-2 lg:row-start-1 lg:justify-self-end">
-        Joined {created_at ?? "-"}
-      </p>
+      <p>Joined {created_at ?? "-"}</p>
     </div>
   )
 }

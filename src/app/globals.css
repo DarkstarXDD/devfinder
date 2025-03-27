@@ -1,18 +1,11 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Inter";
-  font-weight: 100 900;
-  src: url("./assets/fonts/Inter-VariableFont_slnt_wght.woff2");
-}
-
 @theme {
   --breakpoint-md: 36rem;
   --breakpoint-lg: 64rem;
 
-  --font-space-mono: "Inter", sans-serif;
+  --font-inter: var(--font-inter) --text-xs: 0.75rem;
 
-  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.25rem;

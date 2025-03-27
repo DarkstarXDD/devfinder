@@ -29,7 +29,7 @@ export default function UserDetails({
       <UserDetailsItem
         icon={HiBuildingOffice2}
         content={company}
-        href={company && `https://github.com/${company.split("@")[1]}`}
+        href={company && `https://github.com/${formatCompanyName(company)}`}
       />
     </ul>
   )
@@ -57,4 +57,12 @@ function UserDetailsItem({
       </Tag>
     </li>
   )
+}
+
+function formatCompanyName(str: string) {
+  if (str.includes("@")) {
+    return str.split("@")[1]
+  } else {
+    return str
+  }
 }
