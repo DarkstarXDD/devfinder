@@ -17,7 +17,21 @@ export default function UserHeader({
       <p className="text-blue-400 dark:text-blue-200">
         {login ? `@${login}` : "-"}
       </p>
-      <p>Joined {created_at ?? "-"}</p>
+      <p>Joined: {formatDate(created_at) ?? "-"}</p>
     </div>
   )
+}
+
+function formatDate(str: string | undefined) {
+  if (str === undefined) {
+    return null
+  }
+  const time = new Date(str)
+  const options: Intl.DateTimeFormatOptions = {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }
+
+  return time.toLocaleDateString("en-US", options)
 }
