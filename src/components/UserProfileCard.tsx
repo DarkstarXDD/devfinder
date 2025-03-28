@@ -13,12 +13,13 @@ export default function UserProfileCard({
   userData: UserSchemaType | undefined
 }) {
   return (
-    <div className="mt-4 grid grid-cols-[auto_1fr] gap-6 rounded-md bg-white p-4 shadow-md md:gap-10 md:p-10 dark:bg-blue-900">
+    <div className="mt-4 grid grid-cols-[auto_1fr] items-center gap-6 rounded-md bg-white p-4 shadow-md md:gap-10 md:p-10 lg:items-start dark:bg-blue-900">
       <Avatar src={userData?.avatar_url} className="lg:row-span-2" />
       <UserHeader
         name={userData?.name}
         login={userData?.login}
         created_at={userData?.created_at}
+        html_url={userData?.html_url}
       />
       <Bio bio={userData?.bio} className="col-span-2 lg:col-start-2" />
 

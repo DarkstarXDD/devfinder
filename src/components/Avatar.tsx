@@ -31,7 +31,7 @@ function PlaceholderImage({ className }: { className?: string }) {
         className
       )}
     >
-      <IoPerson className="size-16 text-blue-900" />
+      <IoPerson className="size-8 text-blue-900 md:size-16" />
     </div>
   )
 }

@@ -18,6 +18,8 @@
   --color-*: initial;
   --color-white: hsl(0, 0%, 100%);
   --color-red: hsl(0, 92%, 62%);
+  --color-gray: hsl(210, 14%, 83%);
+  --color-gray-muted: hsl(208, 7%, 46%);
 
   --color-blue-50: hsl(227, 100%, 98%);
   --color-blue-200: hsl(212, 100%, 70%);

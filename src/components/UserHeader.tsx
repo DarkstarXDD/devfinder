@@ -1,23 +1,32 @@
 import { cn } from "../lib/utils"
 import type { UserSchemaType } from "../lib/schemas/github-user"
+import Link from "next/link"
 
 type UserHeaderProps = Partial<
-  Pick<UserSchemaType, "name" | "login" | "created_at">
+  Pick<UserSchemaType, "name" | "login" | "created_at" | "html_url">
 > & { className?: string }
 
 export default function UserHeader({
   name,
   login,
   created_at,
+  html_url: profileUrl,
   className = "",
 }: UserHeaderProps) {
   return (
     <div className={cn("grid gap-1 self-center", className)}>
-      <h1 className="text-lg font-bold md:text-xl">{name ?? login ?? "-"}</h1>
-      <p className="text-blue-400 dark:text-blue-200">
-        {login ? `@${login}` : "-"}
-      </p>
-      <p>Joined: {formatDate(created_at) ?? "-"}</p>
+      {profileUrl && (
+        <>
+          <h1 className="text-lg font-bold md:text-xl">{name ?? login}</h1>
+          <Link
+            href={profileUrl}
+            className="justify-self-start text-blue-400 underline hover:opacity-90 dark:text-blue-200"
+          >
+            <p>{`@${login}`}</p>
+          </Link>
+          <p>Joined: {formatDate(created_at)}</p>
+        </>
+      )}
     </div>
   )
 }

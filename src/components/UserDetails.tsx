@@ -20,7 +20,11 @@ export default function UserDetails({
   return (
     <ul className={cn("grid gap-4 md:grid-cols-2", className)}>
       <UserDetailsItem icon={FaLocationDot} content={location} />
-      <UserDetailsItem icon={FaLink} content={blog} href={blog} />
+      <UserDetailsItem
+        icon={FaLink}
+        content={blog}
+        href={blog && formatBlogLink(blog)}
+      />
       <UserDetailsItem
         icon={FaTwitter}
         content={twitter && `@${twitter}`}
@@ -50,7 +54,7 @@ function UserDetailsItem({
   const pStyles = "no-underline"
 
   return (
-    <li className={`flex items-center gap-4 ${content ? "" : "opacity-75"}`}>
+    <li className={`flex items-center gap-4 ${content ? "" : "opacity-70"}`}>
       <Icon className="size-5 shrink-0" />
       <Tag href={href || undefined} className={Tag === "a" ? aStyles : pStyles}>
         {content ? content : "Not Available"}
@@ -64,5 +68,13 @@ function formatCompanyName(str: string) {
     return str.split("@")[1]
   } else {
     return str
+  }
+}
+
+function formatBlogLink(href: string) {
+  if (href.includes("https://")) {
+    return href
+  } else {
+    return `https://${href}`
   }
 }
