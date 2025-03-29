@@ -2,19 +2,29 @@
 
 import { Toggle } from "@radix-ui/react-toggle"
 import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 import { MdLightMode } from "react-icons/md"
 import { MdDarkMode } from "react-icons/md"
 
 export default function Header() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
-  console.log(theme)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <header className="flex items-center justify-between">
       <p className="text-xl font-bold">devfinder</p>
       <Toggle
         className="cursor-pointer"
         aria-label="Enable dark theme"
+        pressed={theme === "dark" ? true : false}
         onPressedChange={(pressed) => setTheme(pressed ? "dark" : "light")}
       >
         {theme === "light" ? (

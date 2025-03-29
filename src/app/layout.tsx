@@ -23,7 +23,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-inter font-regular text-foreground flex min-h-dvh flex-col items-center justify-center bg-blue-50 p-4 text-base font-normal text-blue-800 md:p-6 dark:bg-blue-950 dark:text-white`}
       >
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          enableSystem={false}
+          defaultTheme="dark"
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
