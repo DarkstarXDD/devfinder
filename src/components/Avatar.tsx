@@ -14,6 +14,7 @@ export default function Avatar({
   }
   return (
     <Image
+      priority
       src={src}
       alt=""
       width={117}

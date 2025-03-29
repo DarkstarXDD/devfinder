@@ -1,5 +1,3 @@
-"use client"
-
 import UserHeader from "@/components/UserHeader"
 import Avatar from "@/components/Avatar"
 import Bio from "@/components/Bio"

@@ -20,7 +20,7 @@ export default function UserHeader({
           <h1 className="text-lg font-bold md:text-xl">{name ?? login}</h1>
           <Link
             href={profileUrl}
-            className="justify-self-start text-blue-400 underline hover:opacity-90 dark:text-blue-200"
+            className="justify-self-start text-blue-400 underline outline-none hover:opacity-90 focus-visible:ring-2 focus-visible:ring-blue-300 dark:text-blue-200"
           >
             <p>{`@${login}`}</p>
           </Link>

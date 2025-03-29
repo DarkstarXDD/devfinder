@@ -37,7 +37,7 @@ export default function SearchForm() {
         required
         className="min-w-0 grow rounded p-3 text-base placeholder:text-blue-800/70 focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:outline-none md:p-4 dark:placeholder:text-white/70"
       />
-      <button className="cursor-pointer rounded bg-blue-400 p-3 text-white hover:bg-blue-400/90 focus-visible:ring-2 focus-visible:ring-blue-800 focus-visible:outline-none md:px-4 dark:focus-visible:ring-white">
+      <button className="cursor-pointer rounded bg-blue-400 p-3 text-white outline-none hover:bg-blue-400/90 focus-visible:ring-2 focus-visible:ring-blue-300 md:px-4">
         Search
       </button>
     </form>
