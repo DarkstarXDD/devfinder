@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://devfinder.vercel.app/",
+    url: "https://devfinder-darkstarxdd.vercel.app/",
     title: "devfinder",
 
     description:
       "Check out Darkstar's solution for the Github User Search App challenge on Frontend Mentor",
 
     images: {
-      url: "https://devfinder.vercel.app/og-img.jpeg",
+      url: "https://devfinder-darkstarxdd.vercel.app/og-img.jpeg",
       type: "image/jpeg",
       width: 1440,
       height: 756,
