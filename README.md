@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Frontend Mentor Challenge 29 - Github User Search App
 
-## Getting Started
+This is my solution to the [Github User Search App](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6) challenge on [Frontend Mentor](https://www.frontendmentor.io/).
 
-First, run the development server:
+#
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Links. 🔗
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Live Site URL: https://devfinder-darkstarxdd.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#
 
-## Learn More
+### Built with. 🔨
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- TypeScript
+- Tailwind
+- Zod
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Features. ✨
 
-## Deploy on Vercel
+- The URL search params get updated when a username is searched, which gives couple of advantages:
+  - User can go back and forth between searched usernames since each search is stored in browser history.
+  - User can bookmark or share a specific user's result page.
+  - No need to use state.
+- An error message is displayed for non-existing usernames.
+- Added a light/dark theme toggle with [next-themes](https://www.npmjs.com/package/next-themes).
+- Most components are server components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### App Behavior. ✏️
+
+- When a user searches for a username and presses Enter, the search parameters in the URL update with the entered username using `router.push()`.
+- This triggers a re-render of `page.tsx` (a server component), which sends a new fetch request to the GitHub API using the username from the search parameters.
+- Once the user data is retrieved, the child components re-render with the newly fetched data.
+- Used Zod to validate the response received from the API.
+
+#
+
+### Screenshots of the Solution (Desktop & Mobile). 🔍
+
+![](./solution_screenshots/screenshot_desktop.jpeg)
+![](./solution_screenshots/screenshot_mobile.jpeg)
+
+#
+
+- Some tools i use - [DarkstarXDD/tools](https://gist.github.com/DarkstarXDD/4b1844eda12f34b667a0c36e05fcbdf9)
+- My Frontend Mentor profile - [@DarkstarXDD](https://www.frontendmentor.io/profile/DarkstarXDD)
