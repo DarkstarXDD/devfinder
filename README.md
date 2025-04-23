@@ -22,12 +22,11 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 ### Features ✨
 
 - The URL search params get updated when a username is searched, which gives couple of advantages:
-  - User can go back and forth between searched usernames since each search is stored in browser history.
-  - User can bookmark or share a specific user's result page.
-  - No need to use state.
-- An error message is displayed for non-existing usernames.
-- Added a light/dark theme toggle with [next-themes](https://www.npmjs.com/package/next-themes).
-- Most components are server components.
+  - Each search is stored in browser history (supports back/forward navigation).
+  - Pages can be bookmarked or shared with the searched username.
+  - No need for client-side state to track the search.
+- Error message shown for non-existing usernames.
+- Light/dark theme toggle with [next-themes](https://www.npmjs.com/package/next-themes).
 
 #
 
@@ -37,6 +36,7 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 - This triggers a re-render of `page.tsx` (a server component), which sends a new fetch request to the GitHub API using the username from the search parameters.
 - Once the user data is retrieved, the child components re-render with the newly fetched data.
 - Used Zod to validate the response received from the API.
+- Most components are server components.
 
 #
 
