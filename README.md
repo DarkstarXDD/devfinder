@@ -4,13 +4,13 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 
 #
 
-### Links. 🔗
+### Links 🔗
 
 - Live Site URL: https://devfinder-darkstarxdd.vercel.app/
 
 #
 
-### Built with. 🔨
+### Built with 🔨
 
 - Next.js
 - TypeScript
@@ -19,7 +19,7 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 
 #
 
-### Features. ✨
+### Features ✨
 
 - The URL search params get updated when a username is searched, which gives couple of advantages:
   - User can go back and forth between searched usernames since each search is stored in browser history.
@@ -31,7 +31,7 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 
 #
 
-### App Behavior. ✏️
+### Technical Details 🔧
 
 - When a user searches for a username and presses Enter, the search parameters in the URL update with the entered username using `router.push()`.
 - This triggers a re-render of `page.tsx` (a server component), which sends a new fetch request to the GitHub API using the username from the search parameters.
@@ -40,7 +40,7 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 
 #
 
-### Screenshots of the Solution (Desktop & Mobile). 🔍
+### Screenshots of the Solution (Desktop & Mobile) 🔍
 
 ![](./solution_screenshots/screenshot_desktop.jpeg)
 ![](./solution_screenshots/screenshot_mobile.jpeg)
