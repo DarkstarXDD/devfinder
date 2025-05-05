@@ -1,8 +1,9 @@
-import UserHeader from "@/components/UserHeader"
 import Avatar from "@/components/Avatar"
 import Bio from "@/components/Bio"
-import UserStats from "@/components/UserStats"
 import UserDetails from "@/components/UserDetails"
+import UserHeader from "@/components/UserHeader"
+import UserStats from "@/components/UserStats"
+
 import type { UserSchemaType } from "@/lib/schemas/github-user"
 
 export default function UserProfileCard({

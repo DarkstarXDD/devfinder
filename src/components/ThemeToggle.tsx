@@ -3,8 +3,7 @@
 import { Toggle } from "@radix-ui/react-toggle"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-import { MdLightMode } from "react-icons/md"
-import { MdDarkMode } from "react-icons/md"
+import { MdLightMode, MdDarkMode } from "react-icons/md"
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false)

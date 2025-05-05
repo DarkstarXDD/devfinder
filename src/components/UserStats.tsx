@@ -1,5 +1,6 @@
-import { UserSchemaType } from "../lib/schemas/github-user"
-import { cn } from "../lib/utils"
+import { cn } from "@/lib/utils"
+
+import type { UserSchemaType } from "@/lib/schemas/github-user"
 
 type UserStatsProps = Partial<
   Pick<UserSchemaType, "public_repos" | "followers" | "following">

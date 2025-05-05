@@ -1,6 +1,6 @@
+import ErrorMessage from "@/components/ErrorMessage"
 import Header from "@/components/Header"
 import SearchForm from "@/components/SearchForm"
-import ErrorMessage from "@/components/ErrorMessage"
 import UserProfileCard from "@/components/UserProfileCard"
 import { UserSchema, UserSchemaType } from "@/lib/schemas/github-user"
 

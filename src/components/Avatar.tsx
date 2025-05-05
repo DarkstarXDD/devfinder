@@ -1,6 +1,7 @@
-import { cn } from "../lib/utils"
-import { IoPerson } from "react-icons/io5"
 import Image from "next/image"
+import { IoPerson } from "react-icons/io5"
+
+import { cn } from "@/lib/utils"
 
 export default function Avatar({
   src,

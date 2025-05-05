@@ -1,6 +1,8 @@
-import { cn } from "../lib/utils"
-import type { UserSchemaType } from "../lib/schemas/github-user"
 import Link from "next/link"
+
+import { cn } from "@/lib/utils"
+
+import type { UserSchemaType } from "@/lib/schemas/github-user"
 
 type UserHeaderProps = Partial<
   Pick<UserSchemaType, "name" | "login" | "created_at" | "html_url">

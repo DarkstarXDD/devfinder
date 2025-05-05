@@ -1,10 +1,11 @@
-import { IconType } from "react-icons"
+import { FaLink, FaTwitter } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
-import { FaLink } from "react-icons/fa"
-import { FaTwitter } from "react-icons/fa"
 import { HiBuildingOffice2 } from "react-icons/hi2"
-import { UserSchemaType } from "../lib/schemas/github-user"
-import { cn } from "../lib/utils"
+
+import { cn } from "@/lib/utils"
+
+import type { UserSchemaType } from "@/lib/schemas/github-user"
+import type { IconType } from "react-icons"
 
 type UserDetailsProps = Partial<
   Pick<UserSchemaType, "location" | "blog" | "twitter_username" | "company">
