@@ -4,11 +4,29 @@ import SearchForm from "@/components/SearchForm"
 import UserProfileCard from "@/components/UserProfileCard"
 import { UserSchema, UserSchemaType } from "@/lib/schemas/github-user"
 
-export default async function HomePage({
-  searchParams,
-}: {
+import type { Metadata } from "next"
+
+type PagePropsType = {
   searchParams: Promise<{ username: string | undefined }>
-}) {
+}
+
+export async function generateMetadata({
+  searchParams,
+}: PagePropsType): Promise<Metadata> {
+  const { username } = await searchParams
+
+  if (!username) {
+    return {
+      title: "devfinder",
+    }
+  }
+
+  return {
+    title: `devfinder - ${username}'s Profile`,
+  }
+}
+
+export default async function HomePage({ searchParams }: PagePropsType) {
   let userData: UserSchemaType | undefined
   let error: string | undefined
 

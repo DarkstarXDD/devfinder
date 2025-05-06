@@ -36,6 +36,7 @@ This is my solution to the [Github User Search App](https://www.frontendmentor.i
 - This triggers a re-render of `page.tsx` (a server component), which sends a new fetch request to the GitHub API using the username from the search parameters.
 - Once the user data is retrieved, the child components re-render with the newly fetched data.
 - Used Zod to validate the response received from the API.
+- Updated the web page title with the searched username using Next's `generateMetadata` function.
 - Most components are server components.
 
 #
